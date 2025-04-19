@@ -1,0 +1,36 @@
+<div>
+  <!-- Logo -->
+  <div class="modal-header modal-logo-header">
+    <img src="assets/logos/ph-logo.svg" alt="" class="ph-logo" />
+  </div>
+
+  <!-- Register Form -->
+  <div class="form-container">
+    <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+      <!-- Name -->
+      <div class="input-row">
+        <label for="name">Name</label>
+        <input name="name" ngModel class="input-field" placeholder="Name" required />
+      </div>
+
+      <!-- Email -->
+      <div class="input-row">
+        <label for="email">Email</label>
+        <input name="email" ngModel type="email" class="input-field" placeholder="Email" required email />
+      </div>
+
+      <!-- Favourite Colour -->
+      <div class="input-row">
+        <label for="favouriteColour">Favourite Colour</label>
+        <input name="favouriteColour" ngModel class="input-field" placeholder="Favourite Colour" required />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="button-row">
+        <button class="btn primary-btn" type="submit" [disabled]="form.invalid">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
